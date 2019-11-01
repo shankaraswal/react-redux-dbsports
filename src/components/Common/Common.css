@@ -1,0 +1,9 @@
+.bgtop{ background: #fe525b; color: #fff; padding:10px; text-align: center}
+.bgtop h3{ margin: 0; padding: 0}
+.navbarWrapper{background: #373f50}
+.navbar{border-radius:0; margin-bottom:0}
+.nav.navbar-nav{float:right}
+.nav.navbar-nav a, .navbar-header a{color:#fff}
+.banner{max-height: 400px; overflow: hidden;}
+.banner img{ width: 100%}
+
