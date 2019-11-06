@@ -1,15 +1,17 @@
 import { takeLatest, all } from 'redux-saga/effects';
 
 import {
-    FETCH_ALL_RECORDS, LEAGUES
+    LEAGUES, LEAGUE_DETAIL
 } from './../constant/actiontype';
 
-import { handleAllRecords } from './records'
+import { handleLeagues } from './leagues'
+import { handleLeagueDetail } from './league-detail'
 
 
 function* watchAll() {
     yield all([
-        takeLatest(LEAGUES, handleAllRecords)
+        takeLatest(LEAGUES, handleLeagues),
+        takeLatest(LEAGUE_DETAIL, handleLeagueDetail)
     ])
 }
 

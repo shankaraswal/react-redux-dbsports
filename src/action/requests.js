@@ -1,9 +1,6 @@
-import { LEAGUES, INCREMENT, DECREMENT  } from './../constant/actiontype';
+import { LEAGUES, LEAGUE_DETAIL, INCREMENT, DECREMENT  } from './../constant/actiontype';
 
-const fetchLeagues = () => ({
-        type : LEAGUES
-    });
-
+//RCounter component
 const incAction = () => ({
         type : INCREMENT
     });
@@ -12,8 +9,22 @@ const decAction = () => ({
         type: DECREMENT
     })
 
+//Leagues compoennt
+const fetchLeagues = () => ({
+        type : LEAGUES
+    });
+
+//LeagueDetail component
+const fetchLeagueDetail = (id) =>{
+    console.log('get call');
+    return {
+        type : LEAGUE_DETAIL,
+        id
+    }};
+
 export{
-    fetchLeagues,
     incAction,
-    decAction
+    decAction,
+    fetchLeagues,
+    fetchLeagueDetail
     }

@@ -1,27 +1,33 @@
 import { 
-    LEAGUES,
     RESP_LEAGUES,
+    RESP_LEAGUE_DETAIL,
+    
     INCREMENT,
     DECREMENT
-    } from './../constant/actiontype';
+    } from '../constant/actiontype';
 
-    const INITIAL_STATE = {};
+    const INITIAL_STATE = [];
 
     const leaguesReducer =(state = INITIAL_STATE, action)=>{
         switch(action.type) {
-            case LEAGUES : {
-                return {...state};
-            }
             case RESP_LEAGUES : {
                 const allleagues = action.payload.leagues;
-                return {...state, allleagues};
+                return [allleagues];
                 
             }
             default : return state;
         }
     }
 
-
+    const leagueDetailReducer =(state = INITIAL_STATE, action)=>{
+        switch(action.type) {
+            case RESP_LEAGUE_DETAIL : {
+                const leagueDetail = action.payload.data.leagues;
+                return [leagueDetail ];
+            }
+            default : return [];
+        }
+    }
     const counterReducer = (state = 33, action) => {
         switch(action.type){
             case INCREMENT: 
@@ -36,4 +42,4 @@ import {
             }
         }; 
 
-    export {leaguesReducer, counterReducer};
+    export {leaguesReducer, leagueDetailReducer, counterReducer};

@@ -16,10 +16,10 @@ export default class Nav extends Component {
                   </div>
                   <ul className="nav navbar-nav">
                     <li><NavLink to='/home'>Home</NavLink></li>
-                    <li><NavLink to='/records'>Records</NavLink></li>
+                    <li><NavLink to='/leagues'>All Leagues</NavLink></li>
                     <li><NavLink to='/detail'>About</NavLink></li>
-                    <li><NavLink to='/test'>Counter</NavLink></li>
-                    <li><NavLink to='/rcount'>R-Count</NavLink></li>
+                    {/*<li><NavLink to='/test'>Counter</NavLink></li>
+                    <li><NavLink to='/rcount'>R-Count</NavLink></li>*/}
                   </ul>
                 </div>
             </nav>

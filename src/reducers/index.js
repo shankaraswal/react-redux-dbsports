@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import {leaguesReducer, counterReducer} from './records';
+import {leaguesReducer, leagueDetailReducer, counterReducer} from './all-reducer';
 
 const rootReducer = combineReducers({
     leaguesState:leaguesReducer,
-    counterState:counterReducer
+    counterState:counterReducer,
+    leagueDetailState:leagueDetailReducer
 })
 
 export default rootReducer;

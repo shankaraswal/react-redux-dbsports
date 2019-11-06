@@ -2,10 +2,11 @@ import { call, put, select } from 'redux-saga/effects';
 
 import {
     fetchLeaguesApi
-} from './../api/records'
+} from '../api'
 
-import { respLeagues } from './../action/responses'
-function* handleAllRecords(action) {
+import { respLeagues } from '../action/responses'
+
+function* handleLeagues(action) {
     try {
         const result = yield call(fetchLeaguesApi);
         yield put(respLeagues(result.data))
@@ -17,6 +18,6 @@ function* handleAllRecords(action) {
 }
 
 export {
-    handleAllRecords
+    handleLeagues
 
 }

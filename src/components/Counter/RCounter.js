@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import {incAction, decAction, fetchLeagues} from './../action/requests'
+import {incAction, decAction, fetchLeagues} from './../../action/requests'
 
 class RCounter extends Component {
   constructor(props){
