@@ -1,0 +1,5 @@
+.sportsList .card-body{border:1px solid #ccc; padding: 1rem; font-size: 11px; margin-bottom: 2rem}
+.searchBar{ background:#eee;border:1px solid  #eee; clear: both; margin: 1rem 15px; padding:0.5rem 1rem;}
+.searchBar .navbar{min-height: auto}
+.searchBar .search{float:right}
+.searchBar .search button{margin-left:5px}

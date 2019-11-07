@@ -10,14 +10,14 @@ export default class Nav extends Component {
           <div className="bgtop"><h3>Hot Summer Sale - Save 50%</h3></div>
           <div className="navbarWrapper">
             <nav className="navbar container">
-                <div className="container">
+                <div className="">
                   <div className="navbar-header">``
                     <NavLink className="navbar-brand" to="/">WebSiteName</NavLink>
                   </div>
                   <ul className="nav navbar-nav">
                     <li><NavLink to='/home'>Home</NavLink></li>
                     <li><NavLink to='/leagues'>All Leagues</NavLink></li>
-                    <li><NavLink to='/detail'>About</NavLink></li>
+                    <li><NavLink to='/sports'>All Sports</NavLink></li>
                     {/*<li><NavLink to='/test'>Counter</NavLink></li>
                     <li><NavLink to='/rcount'>R-Count</NavLink></li>*/}
                   </ul>

@@ -1,4 +1,4 @@
-import { LEAGUES, LEAGUE_DETAIL, INCREMENT, DECREMENT  } from './../constant/actiontype';
+import { LEAGUES, LEAGUE_DETAIL, SPORTS, INCREMENT, DECREMENT, TEAMS  } from './../constant/actiontype';
 
 //RCounter component
 const incAction = () => ({
@@ -15,16 +15,27 @@ const fetchLeagues = () => ({
     });
 
 //LeagueDetail component
-const fetchLeagueDetail = (id) =>{
-    console.log('get call');
-    return {
+const fetchLeagueDetail = (id) => ({
         type : LEAGUE_DETAIL,
         id
-    }};
+    });
+
+//Sports component
+const fetchAllSports = () =>({
+        type : SPORTS
+    });
+
+//Teams component
+const fetchTeams = (name) =>({
+    type : TEAMS,
+    name
+});
 
 export{
     incAction,
     decAction,
     fetchLeagues,
-    fetchLeagueDetail
+    fetchLeagueDetail,
+    fetchAllSports,
+    fetchTeams
     }

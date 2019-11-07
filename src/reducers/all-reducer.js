@@ -1,6 +1,8 @@
 import { 
     RESP_LEAGUES,
     RESP_LEAGUE_DETAIL,
+    RESP_SPORTS,
+    RESP_TEAMS,
     
     INCREMENT,
     DECREMENT
@@ -42,4 +44,25 @@ import {
             }
         }; 
 
-    export {leaguesReducer, leagueDetailReducer, counterReducer};
+    const sportsReducer =(state = INITIAL_STATE, action)=>{
+        switch(action.type) {
+            case RESP_SPORTS : {
+                const allsports = action.payload;
+                return allsports.sports;
+                
+            }
+            default : return state;
+        }
+    }
+
+    const teamsReducer =(state = INITIAL_STATE, action)=>{
+        switch(action.type) {
+            case RESP_TEAMS : {
+                const teams = action.payload;
+                return teams.data.teams;
+                
+            }
+            default : return state;
+        }
+    }
+    export {leaguesReducer, leagueDetailReducer, sportsReducer, counterReducer, teamsReducer};

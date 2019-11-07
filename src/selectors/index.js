@@ -3,7 +3,8 @@
 const getAllLeagues = (state) =>
     state.leaguesState[0]
 
-const getSports = (state) =>{
+//filter: sports type from leagues list
+const getSportsType = (state) =>{
     const data = state.leaguesState[0] || [];
     const unique= [];
         data.map(x=> {
@@ -16,7 +17,17 @@ const getSports = (state) =>{
 const getLeagueDetail = (state) =>
     state.leagueDetailState[0]
 
+//Sports Component
+const getSportsList = (state) =>
+    state.sportsState;
 
-export { getAllLeagues, getSports,  getLeagueDetail }
+//Teams component
+const getTeams=(state)=>
+    state.teamsState
+    
+
+
+
+export { getAllLeagues, getSportsType,  getLeagueDetail, getSportsList, getTeams }
 
 

@@ -13,7 +13,7 @@ function* handleLeagues(action) {
 
         } 
     catch (error) {
-        console.log('error in saga')
+        console.log('error in saga: aal leagues api')
     }
 }
 

@@ -4,8 +4,8 @@
 .navbar{border-radius:0; margin-bottom:0}
 .nav.navbar-nav{float:right}
 .nav.navbar-nav a, .navbar-header a{color:#fff}
-.banner{max-height: 400px; text-align: center;  overflow: hidden; margin-top:10px; margin-bottom: 20px;}
-.banner img{ max-width: 100%;}
+.banner{max-height:300px;text-align: center; overflow: hidden; margin-top:10px; margin-bottom: 20px;}
+
 
 .jumbotron.card{margin: 0; padding: 0; background: none}
 .masthead{max-height: 300px; overflow: hidden;}

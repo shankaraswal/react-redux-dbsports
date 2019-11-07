@@ -1,0 +1,5 @@
+.banner {max-width: 100%}
+.banner img{max-width: 100%}
+
+.imgGal{ border:1px solid #eee; padding: 2rem; text-align: center}
+.imgGal img{ display: flex; margin: 2rem auto}

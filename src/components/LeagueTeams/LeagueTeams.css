@@ -1,0 +1,6 @@
+.teams{margin-top:2rem; margin-bottom: 2rem; }
+.teams .inner{border:1px solid #ccc; padding: 1rem; font-size: 11px; overflow: hidden; margin-bottom: 2rem}
+.searchBar{ background:#eee;border:1px solid  #eee; clear: both; margin: 1rem 15px; padding:0.5rem 1rem;}
+.teams .navbar{min-height: auto}
+.teams .search{float:right}
+.teams .search button{margin-left:5px}
