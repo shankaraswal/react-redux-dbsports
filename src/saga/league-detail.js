@@ -13,7 +13,7 @@ function* handleLeagueDetail(action) {
 
         } 
     catch (error) {
-        console.log('error in saga')
+        console.log('error in saga: league detail component')
     }
 }
 

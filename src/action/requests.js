@@ -1,4 +1,4 @@
-import { LEAGUES, LEAGUE_DETAIL, SPORTS, INCREMENT, DECREMENT, TEAMS  } from './../constant/actiontype';
+import { LEAGUES, LEAGUE_DETAIL, SPORTS, INCREMENT, DECREMENT, TEAMS, TEAM_DETAIL  } from './../constant/actiontype';
 
 //RCounter component
 const incAction = () => ({
@@ -31,11 +31,18 @@ const fetchTeams = (name) =>({
     name
 });
 
+//Team detail component
+const fetchTeamDetail = (tid) =>({
+    type : TEAM_DETAIL,
+    tid
+});
+
 export{
     incAction,
     decAction,
     fetchLeagues,
     fetchLeagueDetail,
     fetchAllSports,
-    fetchTeams
+    fetchTeams,
+    fetchTeamDetail
     }

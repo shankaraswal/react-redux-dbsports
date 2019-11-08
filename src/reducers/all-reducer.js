@@ -3,6 +3,7 @@ import {
     RESP_LEAGUE_DETAIL,
     RESP_SPORTS,
     RESP_TEAMS,
+    RESP_TEAM_DETAIL,
     
     INCREMENT,
     DECREMENT
@@ -30,6 +31,7 @@ import {
             default : return [];
         }
     }
+
     const counterReducer = (state = 33, action) => {
         switch(action.type){
             case INCREMENT: 
@@ -65,4 +67,15 @@ import {
             default : return state;
         }
     }
-    export {leaguesReducer, leagueDetailReducer, sportsReducer, counterReducer, teamsReducer};
+
+    const teamDetailReducer =(state = INITIAL_STATE, action)=>{
+        switch(action.type) {
+            case RESP_TEAM_DETAIL : {
+                const teamDetail = action.payload;
+                return teamDetail.data.teams
+            }
+            default : return [];
+        }
+    }
+
+    export {leaguesReducer, leagueDetailReducer, sportsReducer, counterReducer, teamsReducer, teamDetailReducer};

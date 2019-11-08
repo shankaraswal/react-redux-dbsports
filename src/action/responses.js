@@ -1,4 +1,4 @@
-import { RESP_LEAGUES, RESP_LEAGUE_DETAIL, RESP_SPORTS, RESP_TEAMS } from './../constant/actiontype';
+import { RESP_LEAGUES, RESP_LEAGUE_DETAIL, RESP_SPORTS, RESP_TEAMS, RESP_TEAM_DETAIL } from './../constant/actiontype';
 
     const respLeagues = (payload) => ({
         type: RESP_LEAGUES,
@@ -18,10 +18,16 @@ import { RESP_LEAGUES, RESP_LEAGUE_DETAIL, RESP_SPORTS, RESP_TEAMS } from './../
         type:RESP_TEAMS,
         payload
         })
+    
+    const respTeamDetail = (payload)=>({
+        type:RESP_TEAM_DETAIL,
+        payload
+        })
 
 export{
     respLeagues,
     respLeagueDetail,
     respSports,
-    respTeams
+    respTeams,
+    respTeamDetail
     }

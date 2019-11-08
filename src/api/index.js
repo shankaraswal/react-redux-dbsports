@@ -12,4 +12,7 @@ import axios from 'axios';
     export const fetchTeamsApi=(name)=>
         axios.get(`https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=${name}`)
 
+    export const fetchTeamDetailApi=(tid)=>
+        axios.get(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${tid}`)
+
     

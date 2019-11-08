@@ -27,9 +27,9 @@ export default class App extends Component{
               <Switch>
                 <Route exact path='/home' component={Login} />
                 <Route path='/leagues' component={Leagues} />
-                <Route path='/leaguedetail/:id' component={LeagueDetail} />
+                <Route path='/leaguedetail/:lid' component={LeagueDetail} />
                 <Route path='/teams/:name' component={LeagueTeams} />
-                <Route path='/teamdetail/:id' component={TeamDetail} />
+                <Route path='/teamdetail/:tid' component={TeamDetail} />
                 <Route path='/test' component={Counter} />
                 <Route path='/rcount' component={RCounter} />
                 <Route path='/sports' component={Sports} />

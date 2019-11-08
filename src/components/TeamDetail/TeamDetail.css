@@ -1,0 +1,4 @@
+.teamDetail .imgBanner{overflow: hidden;}
+.teamDetail .imgBucket{ overflow: hidden; text-align: center}
+.teamDetail .imgBucket img{margin: 3rem auto; display: block; max-width: 100%;clear: both;}
+.teamDetail .logo{border:2px solid #333;}

@@ -18,7 +18,7 @@ class LeagueDetail extends Component {
 
     
     componentDidMount(){
-        let leagueId =this.props.match.params.id;
+        let leagueId =this.props.match.params.lid;
         console.log(leagueId)
         this.props.actLeagueDetail(leagueId)
     }
