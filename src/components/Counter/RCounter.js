@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import {incAction, decAction, fetchLeagues} from './../../action/requests'
+import {incAction, decAction} from './../../action/requests'
 
 class RCounter extends Component {
   constructor(props){
@@ -10,7 +10,6 @@ class RCounter extends Component {
         }
     }
     componentDidMount(){
-      this.props.getLeagues();
     }
   
 
@@ -35,7 +34,6 @@ const mapStateToProps=(state)=>({
 })
 
 const mapDispatchToProps=(dispatch)=>({
-    getLeagues:()=>dispatch(fetchLeagues()),
     inc: ()=>dispatch(incAction()),
     dec: ()=>dispatch(decAction()),
 })

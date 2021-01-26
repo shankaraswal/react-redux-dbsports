@@ -1,23 +1,16 @@
-import { call, put, select } from 'redux-saga/effects';
+import { call, put } from "redux-saga/effects";
 
-import {
-    fetchLeaguesApi
-} from '../api'
+import { fetchLeaguesApi } from "../api";
 
-import { respLeagues } from '../action/responses'
+import { respLeagues } from "../action/responses";
 
 function* handleLeagues(action) {
-    try {
-        const result = yield call(fetchLeaguesApi);
-        yield put(respLeagues(result.data))
-
-        } 
-    catch (error) {
-        console.log('error in saga: aal leagues api')
-    }
+  try {
+    const result = yield call(fetchLeaguesApi);
+    yield put(respLeagues(result.data));
+  } catch (error) {
+    console.log("error in saga: aal leagues api");
+  }
 }
 
-export {
-    handleLeagues
-
-}
+export { handleLeagues };

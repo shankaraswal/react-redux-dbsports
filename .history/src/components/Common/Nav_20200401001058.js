@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { NavLink, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import "./Common.css";
 export default class Nav extends Component {
   render() {

@@ -18,17 +18,18 @@ class Leagues extends Component {
             uniquesports: []
         }
     }
-
+    
     componentDidMount(){
-       this.props.getLeagues();
-        
+        this.props.getLeagues();
        setTimeout(()=>{
-            this.setState({
-                leagues: this.props.leagues,
-                uniquesports: this.props.uniquesports
-            })
+        this.setState({
+            leagues: this.props.leagues,
+            uniquesports: this.props.uniquesports
+        })
+
        }, 1000);
     }
+    
         
     applyFilter = (e) =>{
        const type =e.target.value;
@@ -59,6 +60,7 @@ class Leagues extends Component {
 
 
     render(){
+        console.log(this.props.leagues)
         return (
            <div className="leagues" id="leagues">
                <MastHead url={this.state.mastimg} />
@@ -86,17 +88,16 @@ class Leagues extends Component {
                 </div>
 
                <div className="leaguesList">
-                    {(this.state.leagues).map(item=>(
+                    {(this.state.leagues ||[]).map(item=>(
                         <div className="card col-sm-4" key={item.idLeague}>
                         <div className="card-body">
-                        <h4 className="card-title">{item.strLeague}</h4>
-                        <h5 className="card-title">{item.strSport}</h5>
+                            <h4 className="card-title">{item.strLeague}</h4>
+                            <h5 className="card-title">{item.strSport}</h5>
                             <p>League Id: <b>{item.idLeague}</b></p>
                             <p>{item.strLeagueAlternate}</p>
                             <p><NavLink to={`/leaguedetail/${item.idLeague}`}>League Detail</NavLink></p>
                             <p><NavLink to={`/teams/${item.strLeague}`}>Teams in League</NavLink></p>
                         </div>
-                            
                         </div>
                     ))}
                 </div>

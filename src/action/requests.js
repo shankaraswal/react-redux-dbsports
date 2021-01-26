@@ -1,48 +1,57 @@
-import { LEAGUES, LEAGUE_DETAIL, SPORTS, INCREMENT, DECREMENT, TEAMS, TEAM_DETAIL  } from './../constant/actiontype';
+import {
+  LEAGUES,
+  LEAGUE_DETAIL,
+  SPORTS,
+  INCREMENT,
+  DECREMENT,
+  TEAMS,
+  TEAM_DETAIL,
+  REQ_LEAGUES
+} from "./../constant/actiontype";
 
 //RCounter component
 const incAction = () => ({
-        type : INCREMENT
-    });
-    
+  type: INCREMENT
+});
+
 const decAction = () => ({
-        type: DECREMENT
-    })
+  type: DECREMENT
+});
 
 //Leagues compoennt
 const fetchLeagues = () => ({
-        type : LEAGUES
-    });
+  type: REQ_LEAGUES
+});
 
 //LeagueDetail component
-const fetchLeagueDetail = (id) => ({
-        type : LEAGUE_DETAIL,
-        id
-    });
+const fetchLeagueDetail = id => ({
+  type: LEAGUE_DETAIL,
+  id
+});
 
 //Sports component
-const fetchAllSports = () =>({
-        type : SPORTS
-    });
+const fetchAllSports = () => ({
+  type: SPORTS
+});
 
 //Teams component
-const fetchTeams = (name) =>({
-    type : TEAMS,
-    name
+const fetchTeams = name => ({
+  type: TEAMS,
+  name
 });
 
 //Team detail component
-const fetchTeamDetail = (tid) =>({
-    type : TEAM_DETAIL,
-    tid
+const fetchTeamDetail = tid => ({
+  type: TEAM_DETAIL,
+  tid
 });
 
-export{
-    incAction,
-    decAction,
-    fetchLeagues,
-    fetchLeagueDetail,
-    fetchAllSports,
-    fetchTeams,
-    fetchTeamDetail
-    }
+export {
+  incAction,
+  decAction,
+  fetchLeagues,
+  fetchLeagueDetail,
+  fetchAllSports,
+  fetchTeams,
+  fetchTeamDetail
+};
